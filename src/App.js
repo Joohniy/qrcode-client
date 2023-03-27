@@ -5,7 +5,6 @@ import {
 } from 'react-router-dom';
 
 import Generate from './Components/generate/generate';
-import QRpage from './Components/qrpage/qrpage';
 import User from './Components/userpage/user';
 
 import './App.css';
@@ -16,8 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/generate" element={<Generate />} />
-          <Route path="/qrpage" element={<QRpage />} />
-          <Route path="/user" element={<User />} />
+          <Route path="/user/:id" element={<User />} />
         </Routes>
       </BrowserRouter>
     </div>

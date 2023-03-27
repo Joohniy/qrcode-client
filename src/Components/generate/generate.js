@@ -26,7 +26,6 @@ export default function Generate() {
     })
       .then((response) => {
         setUser(response.data.user);
-        console.log(user);
       })
       .catch((e) => console.log(e, 'something is not right'));
   };
@@ -34,7 +33,7 @@ export default function Generate() {
   useEffect(() => {
     if (user._id) {
       navigate({
-        pathname: '/qrpage',
+        pathname: '/user/:id',
       }, { state: { userName: `${user.name}`, userId: `${user._id}` } });
     }
   }, [user]);
