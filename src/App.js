@@ -4,8 +4,9 @@ import {
   BrowserRouter, Routes, Route,
 } from 'react-router-dom';
 
-import Generate from './Components/generate/generate';
-import User from './Components/userpage/user';
+import CreateUser from './Components/createUser/createUser';
+import CreateQrCode from './Components/createQr/createQr';
+import User from './Components/user/user';
 
 import './App.css';
 
@@ -14,7 +15,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/generate" element={<Generate />} />
+          <Route path="/createuser" element={<CreateUser />} />
+          <Route path="/userqrcode" element={<CreateQrCode />} />
           <Route path="/user/:id" element={<User />} />
         </Routes>
       </BrowserRouter>
