@@ -33,6 +33,7 @@ export default function CreateUser() {
 
   useEffect(() => {
     if (userDB._id) {
+      console.log(userDB._id);
       navigate({
         pathname: '/userqrcode',
       }, { state: { userName: `${userDB.name}`, userId: `${userDB._id}` } });

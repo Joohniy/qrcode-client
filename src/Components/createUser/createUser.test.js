@@ -5,7 +5,6 @@ import axios from 'axios';
 import {
   fireEvent, render, screen, waitFor,
 } from '@testing-library/react';
-
 import CreateUser from './createUser';
 
 const mockedUsedNavigate = jest.fn();
@@ -26,7 +25,7 @@ test('test to see if the component will send the registration', async () => {
     data: {
       user: {
         name: 'João Pedro',
-        id: '23232323232323',
+        _id: '23232323232323',
       },
     },
   });
